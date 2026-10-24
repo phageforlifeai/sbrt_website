@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block the source/build folders from being crawled (they are not uploaded,
+# but this is harmless insurance if you deploy the whole folder).
+Disallow: /pages/
+Disallow: /_partials/
+Disallow: /build.py
+
+Sitemap: https://www.sbrt.in/sitemap.xml
