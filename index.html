@@ -89,8 +89,8 @@ nav a:hover,nav a[aria-current="page"]{color:var(--ink)}
 .phead{padding:88px 0 28px;position:relative}
 .phead canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
 .phead .wrap{position:relative;z-index:1}
-.phead-art{position:absolute;right:40px;top:96px;width:clamp(170px,15vw,230px);opacity:.97;pointer-events:none}
-@media(max-width:960px){.phead-art{display:none}}
+.phead-art{position:absolute;right:40px;top:92px;width:clamp(240px,21vw,330px);opacity:.97;pointer-events:none}
+@media(max-width:1100px){.phead-art{display:none}}
 .live2{display:grid;grid-template-columns:1fr 1fr;gap:48px}
 @media(max-width:960px){.live2{grid-template-columns:1fr}}
 .live2 #pulse-grid,.live2 #echo-grid{grid-template-columns:1fr}
@@ -150,8 +150,8 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px}
 .card h3{margin:0 0 8px;font-weight:500;font-size:16px}
 .card p{font-size:13px;color:var(--mut);margin:0}
 .card .k{font-size:10px;letter-spacing:.14em;color:var(--mut);display:block;margin-bottom:12px}
-.plates{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-@media(max-width:900px){.plates{grid-template-columns:repeat(2,1fr)}}
+.plates{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+@media(max-width:760px){.plates{grid-template-columns:1fr}}
 figure.plate{margin:0;border:1px solid var(--line);padding:14px}
 figure.plate img{display:block;width:100%;filter:grayscale(1);transition:filter .45s}
 figure.plate img{aspect-ratio:1/1;object-fit:contain;background:#fff}
@@ -261,6 +261,12 @@ footer.site{border-top:1px solid var(--line);padding:72px 0 40px}
 .entries a:nth-child(2) small{color:var(--chakra)}
 .entries a:nth-child(3) small{color:var(--india-green)}
 
+/* ---------------- content-port voices ---------------- */
+.fmotto{margin-top:28px;font:500 10px/1 "Spline Sans Mono",ui-monospace,Menlo,monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);text-align:center}
+.sec h3{margin:34px 0 12px;font:500 18px/1.4 Archivo,sans-serif}
+.quote{border-left:2px solid var(--saffron);padding:8px 0 8px 24px;font:400 19px/1.6 "Source Serif 4",Georgia,serif;max-width:46ch}
+.quote .qby{display:block;margin-top:10px;font:500 10px/1 "Spline Sans Mono",ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+
 </style>
 <script type="application/ld+json">
 {
@@ -286,6 +292,7 @@ footer.site{border-top:1px solid var(--line);padding:72px 0 40px}
     <a href="membership.html">Membership</a>
     <a href="publications.html">Publications</a>
     <a href="news.html">News</a>
+    <a href="beyond-the-lab.html">Beyond the Lab</a>
   </nav>
   <div class="right">
     <span>English</span>
@@ -325,11 +332,13 @@ footer.site{border-top:1px solid var(--line);padding:72px 0 40px}
         <a href="leadership.html">Capsid Council</a>
         <a href="members.html">Member directory</a>
         <a href="activities.html">Activities</a>
+        <a href="beyond-the-lab.html">Beyond the Lab</a>
       </div>
       <div>
         <h4>Gather</h4>
         <a href="icbrar-2026.html">ICBRAR-2026 · Hisar</a>
         <a href="gallery.html">Gallery</a>
+        <a href="honors-recognition.html">Honors &amp; recognition</a>
         <a href="news.html">News &amp; circulars</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -352,6 +361,7 @@ footer.site{border-top:1px solid var(--line);padding:72px 0 40px}
       <span>SBRT® · Society for Bacteriophage Research &amp; Therapy, India</span>
       <span>Est. 2018 · Varanasi · sbrtganga@gmail.com</span>
     </div>
+    <div class="fmotto">Small phages. Shared purpose. Sustainable impact. &middot; STRONGER TOGETHER</div>
   </div>
 </footer>
 <script>/* ============================================================================

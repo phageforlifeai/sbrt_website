@@ -54,9 +54,11 @@ nav a:hover,nav a[aria-current="page"]{color:var(--ink)}
 .hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0}
 .hero h1{margin:0;font:700 clamp(104px,21vw,330px)/.84 Archivo,sans-serif;letter-spacing:.005em;position:relative;z-index:2;pointer-events:none}
 .hero h1 sup{font:400 clamp(24px,3vw,42px)/1 Barlow,sans-serif;vertical-align:top;position:relative;top:.7em;margin-left:.15em;border:2px solid var(--ink);border-radius:50%;display:inline-grid;place-items:center;width:1.15em;height:1.15em;font-size:clamp(15px,2vw,26px)}
-.phage{position:absolute;right:0;bottom:-6px;height:min(94%,830px);aspect-ratio:2/3;z-index:1;pointer-events:none}
+.phage{position:absolute;right:0;bottom:-6px;height:min(94%,820px);aspect-ratio:724/952;z-index:1;cursor:pointer}
 .phage svg{width:100%;height:100%;display:block;overflow:visible}
-.phage img{width:100%;height:100%;object-fit:contain;display:block;mix-blend-mode:multiply}
+.phage #rig{position:relative;width:100%;height:100%}
+.phage #rig canvas{position:absolute;inset:0;width:100%;height:100%}
+.phage #rig img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;mix-blend-mode:multiply;transition:opacity .45s ease}
 #rig{transition:transform .25s ease-out}
 .meta{position:absolute;left:32px;bottom:150px;display:flex;gap:28px;align-items:center;font-size:14px;z-index:2;flex-wrap:wrap}
 .pill{background:var(--pill);color:var(--mut);font:500 10px/1.7 "Spline Sans Mono",ui-monospace,Menlo,monospace;letter-spacing:.08em;padding:3px 10px;border-radius:99px;margin-left:8px;font-style:normal}
@@ -87,8 +89,8 @@ nav a:hover,nav a[aria-current="page"]{color:var(--ink)}
 .phead{padding:88px 0 28px;position:relative}
 .phead canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
 .phead .wrap{position:relative;z-index:1}
-.phead-art{position:absolute;right:40px;top:96px;width:clamp(170px,15vw,230px);opacity:.97;pointer-events:none}
-@media(max-width:960px){.phead-art{display:none}}
+.phead-art{position:absolute;right:40px;top:92px;width:clamp(240px,21vw,330px);opacity:.97;pointer-events:none}
+@media(max-width:1100px){.phead-art{display:none}}
 .live2{display:grid;grid-template-columns:1fr 1fr;gap:48px}
 @media(max-width:960px){.live2{grid-template-columns:1fr}}
 .live2 #pulse-grid,.live2 #echo-grid{grid-template-columns:1fr}
@@ -148,8 +150,8 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px}
 .card h3{margin:0 0 8px;font-weight:500;font-size:16px}
 .card p{font-size:13px;color:var(--mut);margin:0}
 .card .k{font-size:10px;letter-spacing:.14em;color:var(--mut);display:block;margin-bottom:12px}
-.plates{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-@media(max-width:900px){.plates{grid-template-columns:repeat(2,1fr)}}
+.plates{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+@media(max-width:760px){.plates{grid-template-columns:1fr}}
 figure.plate{margin:0;border:1px solid var(--line);padding:14px}
 figure.plate img{display:block;width:100%;filter:grayscale(1);transition:filter .45s}
 figure.plate img{aspect-ratio:1/1;object-fit:contain;background:#fff}
@@ -259,6 +261,12 @@ footer.site{border-top:1px solid var(--line);padding:72px 0 40px}
 .entries a:nth-child(2) small{color:var(--chakra)}
 .entries a:nth-child(3) small{color:var(--india-green)}
 
+/* ---------------- content-port voices ---------------- */
+.fmotto{margin-top:28px;font:500 10px/1 "Spline Sans Mono",ui-monospace,Menlo,monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);text-align:center}
+.sec h3{margin:34px 0 12px;font:500 18px/1.4 Archivo,sans-serif}
+.quote{border-left:2px solid var(--saffron);padding:8px 0 8px 24px;font:400 19px/1.6 "Source Serif 4",Georgia,serif;max-width:46ch}
+.quote .qby{display:block;margin-top:10px;font:500 10px/1 "Spline Sans Mono",ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+
 </style>
 <script type="application/ld+json">
 {
@@ -284,6 +292,7 @@ footer.site{border-top:1px solid var(--line);padding:72px 0 40px}
     <a href="membership.html">Membership</a>
     <a href="publications.html">Publications</a>
     <a href="news.html">News</a>
+    <a href="beyond-the-lab.html">Beyond the Lab</a>
   </nav>
   <div class="right">
     <span>English</span>
@@ -326,11 +335,13 @@ footer.site{border-top:1px solid var(--line);padding:72px 0 40px}
         <a href="leadership.html">Capsid Council</a>
         <a href="members.html">Member directory</a>
         <a href="activities.html">Activities</a>
+        <a href="beyond-the-lab.html">Beyond the Lab</a>
       </div>
       <div>
         <h4>Gather</h4>
         <a href="icbrar-2026.html">ICBRAR-2026 · Hisar</a>
         <a href="gallery.html">Gallery</a>
+        <a href="honors-recognition.html">Honors &amp; recognition</a>
         <a href="news.html">News &amp; circulars</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -353,6 +364,7 @@ footer.site{border-top:1px solid var(--line);padding:72px 0 40px}
       <span>SBRT® · Society for Bacteriophage Research &amp; Therapy, India</span>
       <span>Est. 2018 · Varanasi · sbrtganga@gmail.com</span>
     </div>
+    <div class="fmotto">Small phages. Shared purpose. Sustainable impact. &middot; STRONGER TOGETHER</div>
   </div>
 </footer>
 <script>/* ============================================================================
@@ -660,6 +672,66 @@ footer.site{border-top:1px solid var(--line);padding:72px 0 40px}
       if (!reduce && rig) rig.style.transform = "translate(" + ((px / w - .5) * -14) + "px," + ((py / h - .5) * -10) + "px)";
     });
   }
+
+  /* ---- 2b. Hero assembly: tile-particles fly in and build the artwork ---- */
+  (function () {
+    var box = document.querySelector(".phage");
+    var img = box && box.querySelector("img");
+    var cv = document.getElementById("assemble");
+    if (!box || !img || !cv) return;
+    var reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
+    var done = function () { img.style.opacity = "1"; box.classList.add("assembled"); };
+    var boot = function () {
+      var W = img.clientWidth | 0, H = img.clientHeight | 0;
+      if (reduce || innerWidth < 720 || !W || !H) { done(); return; }
+      var off = document.createElement("canvas"); off.width = W; off.height = H;
+      var ox = off.getContext("2d", { willReadFrequently: true });
+      ox.drawImage(img, 0, 0, W, H);
+      var px = null;
+      try { px = ox.getImageData(0, 0, W, H).data; } catch (e) { px = null; }
+      var T = 14, cols = Math.ceil(W / T), rows = Math.ceil(H / T), tiles = [];
+      for (var ry = 0; ry < rows; ry++) for (var rx = 0; rx < cols; rx++) {
+        var has = !px, x, y;   /* no pixel access? animate every tile — white ones stay invisible */
+        if (px) for (y = ry * T; y < Math.min((ry + 1) * T, H) && !has; y += 3)
+          for (x = rx * T; x < Math.min((rx + 1) * T, W); x += 3) {
+            var o = (y * W + x) * 4;
+            if (px[o] < 244 || px[o + 1] < 244 || px[o + 2] < 244) { has = true; break; }
+          }
+        if (!has) continue;
+        var a = Math.random() * 6.283, d = 260 + Math.random() * 560;
+        tiles.push({ sx: rx * T, sy: ry * T, sw: Math.min(T, W - rx * T), sh: Math.min(T, H - ry * T),
+          tx: rx * T, ty: ry * T, ox: Math.cos(a) * d, oy: Math.sin(a) * d - 120,
+          dl: Math.random() * 850, du: 800 + Math.random() * 700 });
+      }
+      if (!tiles.length) { done(); return; }
+      img.style.opacity = "0";
+      var c = cv.getContext("2d"), dpr = Math.min(devicePixelRatio || 1, 2);
+      cv.width = W * dpr; cv.height = H * dpr; c.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var t0 = performance.now();
+      var frame = function (now) {
+        var el = now - t0; c.clearRect(0, 0, W, H);
+        var alive = false;
+        for (var i = 0; i < tiles.length; i++) {
+          var t = tiles[i], k = (el - t.dl) / t.du;
+          if (k < 0) { alive = true; continue; }
+          if (k > 1) k = 1; else alive = true;
+          var e = 1 - Math.pow(1 - k, 3), s = 1.7 - .7 * e;
+          c.globalAlpha = Math.min(1, k * 3);
+          c.drawImage(off, t.sx, t.sy, t.sw, t.sh,
+            t.tx + t.ox * (1 - e) - t.sw * (s - 1) / 2,
+            t.ty + t.oy * (1 - e) - t.sh * (s - 1) / 2, t.sw * s, t.sh * s);
+        }
+        if (alive) requestAnimationFrame(frame);
+        else { c.clearRect(0, 0, W, H); done(); }
+      };
+      raf = requestAnimationFrame(frame);
+    };
+    var raf = 0, safety = 0;
+    var play = function () { cancelAnimationFrame(raf); clearTimeout(safety); safety = setTimeout(done, 6000); boot(); };
+    box.addEventListener("click", function () { play(); });
+    if (img.complete && img.naturalWidth) boot(); else img.addEventListener("load", boot, { once: true });
+    safety = setTimeout(done, 6000); /* safety: never hold the artwork hostage */
+  })();
 
   /* ---- 5. Publication search + filter ----------------------------------- */
   var searchInput = document.getElementById("pub-search");
